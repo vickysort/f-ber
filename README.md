@@ -11,7 +11,7 @@ Online call taxi service
 * When the cab is assigned to the customer, it can no longer pick up any other customers
 * If there are no taxis available, you reject the customer’s request.
 * The customer ends the ride at some location. The cab waits around outside the customer’s house, and is available to be assigned to another customer.
-* 
+
 ![ScreenShot](/screenshots/dashboard.png)
 
 **Notes:**
