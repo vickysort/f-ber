@@ -1,0 +1,24 @@
+<h2>Book Cab</h2>
+
+<form ng-submit="bookcab()">
+	<fieldset class="form-group">
+		<label for="latitude">Pick-up Latitude</label> 
+		<input required ng-model="user.location.latitude" type="number" class="form-control" id="latitude"
+			placeholder="Enter Latitude"> 
+		<label for="longitude">Pick-up Longitude</label> 
+		<input required ng-model="user.location.longitude" type="number" class="form-control" id="longitude"
+			placeholder="Enter Longitude"> 
+		<label for="color">Color Preference (Extra 5 dogecoin for Pink cars)</label> 
+		<select required ng-model="user.colorPreference" class="form-control" id="color">
+			<option value=''>Select</option>
+			<option value='green'>Green</option>
+			<option value='yellow'>Yellow</option>
+			<option value='pink'>Pink</option>
+			<option value='blue'>Blue</option>
+			<option value='orange'>Orange</option>
+			<option value='red'>Red</option>
+			<option value='white'>White</option>
+	    </select>
+	</fieldset>
+	<button type="submit" class="btn btn-primary">Book Cab</button>
+</form>

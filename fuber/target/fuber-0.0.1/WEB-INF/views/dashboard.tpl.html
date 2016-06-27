@@ -1,0 +1,29 @@
+<h2>Cab Availability</h2>
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Latitude</th>
+				<th>Longitude</th>
+				<th>Color</th>
+				<th>Availability</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="cab in cabs">
+				<td ng-if="cab.available">{{cab.id}}</td>
+				<td ng-if="cab.available">{{cab.location.latitude}}</td>
+				<td ng-if="cab.available">{{cab.location.longitude}}</td>
+				<td ng-if="cab.available">{{cab.color}}</td>
+				<td ng-if="cab.available">{{cab.available}}</td>
+				
+				<td class="table-danger" ng-if="!cab.available">{{cab.id}}</td>
+				<td class="table-danger" ng-if="!cab.available">{{cab.location.latitude}}</td>
+				<td class="table-danger" ng-if="!cab.available">{{cab.location.longitude}}</td>
+				<td class="table-danger" ng-if="!cab.available">{{cab.color}}</td>
+				<td class="table-danger" ng-if="!cab.available">{{cab.available}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,46 @@
+<h2>Cab Assigned</h2>
+<h4>The nearest available Cab is assigned to you</h4>
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Cab ID</th>
+				<th>Cab Location</th>
+				<th>Cab Color</th>
+				<th>Cab Availability</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{cab.id}}</td>
+				<td>[{{cab.location.latitude}},{{cab.location.longitude}}]</td>
+				<td>{{cab.color}}</td>
+				<td>{{cab.available}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<form ng-submit="endride()">
+	<fieldset class="form-group">
+		<label for="destlatitude">Drop Latitude</label> 
+		<input required ng-model="user.destination.latitude" type="number" class="form-control" id="destlatitude"
+			placeholder="Enter Latitude"> 
+		<label for="destlongitude">Drop Longitude</label> 
+		<input required ng-model="user.destination.longitude" type="number" class="form-control" id="destlongitude"
+			placeholder="Enter Longitude">
+		<label for="traveltime">Time Taken (Minutes)</label> 
+		<input required ng-model="user.traveltime" type="number" class="form-control" id="traveltime"
+			placeholder="Enter total time taken">  
+	</fieldset>
+	<button ng-if="!rideEnded" type="submit" class="btn btn-danger">End Ride</button>
+</form>
+
+<div ng-if="rideEnded" class="jumbotron">
+  <h1>Fare Breakup</h1>
+  <p>Total distance : {{user.travelDistance}} x 2 dogecoins</p>
+  <p>Total travel time : {{user.traveltime}} x1 dogecoin</p>
+  <p ng-if="user.colorPreference == 'pink'">Color preference (Pink): 5 dogecoins</p>
+  <p>Total travel cost: {{user.cost}} dogecoins</p>
+  <p><a class="btn btn-primary btn-lg" ui-sref="bookcab" role="button">Book another cab &raquo;</a></p>
+</div>

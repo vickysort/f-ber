@@ -1,0 +1,7 @@
+<h2>Travel Log</h2>
+
+<div ng-repeat="log in travelLog">
+<p>{{log}}</p>
+</div>
+
+<div ng-if="travelLog.length == 0">No logs yet. Book a cab first.</div>
