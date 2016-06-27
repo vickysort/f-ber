@@ -1,5 +1,10 @@
 # Füber
 
+**Technologies Used:**
+
+* Spring MVC (REST Service)
+* AngularJS (Frontend)
+
 Online call taxi service
 
 **Modelling Problem**
